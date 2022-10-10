@@ -1,6 +1,6 @@
 import csv
-import numpy as np;
-import random;
+import numpy as np
+import random
 
 def main():
     with open('D:\\软件工程.csv','r') as f:
