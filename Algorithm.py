@@ -31,8 +31,6 @@ def main():
                 list2.append(0)
 
 
-
-
         length = 90
         fenmu = 0.000
         fenzi = 0.000
@@ -112,20 +110,18 @@ def main():
 
                 list5[j]=list4[j]/(i+1)
 
-            print(list7)
-            print(list4)
-
-        fenmu=e*60
+        fenmu=e*90
 
         #print(list5)
 
         list6=np.argsort(list5)
-        print(list6)
         list6=list6[:8]
-        print(list6)
 
+        backfenmu=0
+        backfenzi=0
         for i in range(e,20):
             fenmu+=8
+            backfenmu+=8
             random.seed()
             for j in range(length - 8):
                 num = random.random()
@@ -144,17 +140,16 @@ def main():
                 else:
                     if list2[j] == 1:
                         if num < c:
-                            list3[j] = 1
-                        else:
                             list3[j] = 0
+                        else:
+                            list3[j] = 1
                     else:
                         if num < d:
-                            list3[j] = 1
-                        else:
                             list3[j] = 0
+                        else:
+                            list3[j] = 1
 
                 list4[j] = list4[j] + list3[j]
-
                 list5[j] = list4[j] / (i + 1)
                 # print(list5[j])
 
@@ -172,16 +167,23 @@ def main():
             for j in range(8):
                 if list3[list6[j]]==0:
                     fenzi+=1
+                    backfenzi+=1
 
             fenmu+=f
+            backfenmu+=f
             for j in range(f):
                 num = random.randint(0,80)
                 if list3[num]==0:
                     fenzi+=1
+                    backfenzi+=1
+
+
 
         print(list5)
         rating=fenzi/fenmu
         #print(list5)
+        print(rating)
+        rating=backfenzi/backfenmu
         print(rating)
 
 main()
