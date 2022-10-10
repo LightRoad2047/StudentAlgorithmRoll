@@ -30,6 +30,9 @@ def main():
             else:
                 list2.append(0)
 
+
+
+
         length = 90
         fenmu = 0.000
         fenzi = 0.000
@@ -121,7 +124,7 @@ def main():
         list6=list6[:8]
         print(list6)
 
-        for i in range(e,100):
+        for i in range(e,20):
             fenmu+=8
             random.seed()
             for j in range(length - 8):
