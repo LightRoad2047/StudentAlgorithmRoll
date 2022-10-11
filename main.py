@@ -14,8 +14,8 @@ def random_information():  # 随机生成信息
     boy = '炫迁铭晋胜池信磊峻越谦元海钟任元冰朋韶然祺旷宁靖奥若钟涛苛勤含棕宏羽肃义望卫健轩皓南文谦苛敬圣渊聪闻彰豫原鸿乐洋昆文基飘妙茂方勉昭善恒昆擎利意楷商虎卫圆肖钟波向群乐惜石尘生信星博卡伟悟茂松鸣利神实际永余民渊旷盛誓睿名壮际翼宁冠浦刊圣文韶境笃音高伯境逸民阳磊昙彤桦翰景幽原翔福镇鸽雷浚理悠廉清年韵欧景文幽青怀浅胜宜胜庭岳宜逸载奇裕国善凯兼展震笃意羽泰浅如泰忆阳凌昙游浩雄世宇宜瑾川越神神瑞傲朴宜惜庭本岸煜厚清观乾彤轩健扬鼎棕山星蒙淘挚悠丰浚卡祥辉峰毅贤峰善高翱弘本烨思净耀坤伦勋蒙德秀宁'
     # 名
     name = '真中凯歌易仁器义礼智信友'
-    #是否班委
-    choose ='是否'
+    # 是否班委
+    choose = '是否'
 
     if random.choice(range(100)) > 3:
         firstName_name = firstName[random.choice(range(len(firstName)))]
@@ -25,58 +25,57 @@ def random_information():  # 随机生成信息
             i += 1
         firstName_name = firstName2[i:i + 2]
 
-    sex = random.choice(range(2))#性别
+    sex = random.choice(range(2))  # 性别
 
-    banwei = random.choice(choose) #是否班委
+    banwei = random.choice(choose)  # 是否班委
 
-    grade = random.choice(np.random.normal(3, 1, 1)) #绩点
+    grade = random.choice(np.random.normal(3, 1, 1))  # 绩点
 
-    while grade>4 or grade<1.5:
+    while grade > 4 or grade < 1.5:
         grade = random.choice(np.random.normal(3, 1, 1))
     name_1 = ""
-    flagg=0
+    flagg = 0
     if random.choice(range(2)) > 0:
         name_1 = name[random.choice(range(len(name)))]
-
 
     # 生成并返回一个名字
     if sex > 0:
         girl_name = girl[random.choice(range(len(girl)))]
-        data = firstName_name + name_1 + girl_name + "," + '女' + ',' + banwei + ',' + str(round(grade,3))
+        data = firstName_name + name_1 + girl_name + "," + '女' + ',' + banwei + ',' + str(round(grade, 3))
     else:
         boy_name = boy[random.choice(range(len(boy)))]
         if random.choice(range(2)) > 0:
             name_1 = name[random.choice(range(len(name)))]
-        data = firstName_name + name_1 + boy_name + ',' + '男' + ',' + banwei + ',' + str(round(grade,3))
+        data = firstName_name + name_1 + boy_name + ',' + '男' + ',' + banwei + ',' + str(round(grade, 3))
     return data
 
 
 def main():
-    with open('E:\\软件工程.csv', 'w') as m:
-        msg1 =  '姓名' + ',' + '性别' + ',' + '是否班委' + ',' + '绩点' + ',' + '出勤概率'
-        m.write('{}\n'.format(msg1))
-        for i in range(N):
-            msg = random_information()
-            m.write('{}\n'.format(msg))
-    with open('E:\\概率论.csv', 'w') as m:
-        msg1 =  '姓名' + ',' + '性别' + ',' + '是否班委' + ',' + '绩点' + ',' + '出勤概率'
-        m.write('{}\n'.format(msg1))
-        for i in range(N):
-            msg = random_information()
-            m.write('{}\n'.format(msg))
-    with open('E:\\数据库.csv', 'w') as m:
+    with open(r'C:\Users\dao2a\Desktop\AlorithmRoll\软件工程.csv', 'w') as m:
         msg1 = '姓名' + ',' + '性别' + ',' + '是否班委' + ',' + '绩点' + ',' + '出勤概率'
         m.write('{}\n'.format(msg1))
         for i in range(N):
             msg = random_information()
             m.write('{}\n'.format(msg))
-    with open('E:\\操作系统.csv', 'w') as m:
+    with open(r'C:\Users\dao2a\Desktop\AlorithmRoll\概率论.csv', 'w') as m:
         msg1 = '姓名' + ',' + '性别' + ',' + '是否班委' + ',' + '绩点' + ',' + '出勤概率'
         m.write('{}\n'.format(msg1))
         for i in range(N):
             msg = random_information()
             m.write('{}\n'.format(msg))
-    with open('E:\\接口技术.csv', 'w') as m:
+    with open(r'C:\Users\dao2a\Desktop\AlorithmRoll\数据库.csv', 'w') as m:
+        msg1 = '姓名' + ',' + '性别' + ',' + '是否班委' + ',' + '绩点' + ',' + '出勤概率'
+        m.write('{}\n'.format(msg1))
+        for i in range(N):
+            msg = random_information()
+            m.write('{}\n'.format(msg))
+    with open(r'C:\Users\dao2a\Desktop\AlorithmRoll\操作系统.csv', 'w') as m:
+        msg1 = '姓名' + ',' + '性别' + ',' + '是否班委' + ',' + '绩点' + ',' + '出勤概率'
+        m.write('{}\n'.format(msg1))
+        for i in range(N):
+            msg = random_information()
+            m.write('{}\n'.format(msg))
+    with open(r'C:\Users\dao2a\Desktop\AlorithmRoll\接口技术.csv', 'w') as m:
         msg1 = '姓名' + ',' + '性别' + ',' + '是否班委' + ',' + '绩点' + ',' + '出勤概率'
         m.write('{}\n'.format(msg1))
         for i in range(N):
