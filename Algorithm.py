@@ -19,6 +19,8 @@ def main():
         list1=[]    #是否班委
         list2=[]    #绩点是否大于0
 
+
+
         for row in reader:
             if row[2]=="是":
                 list1.append(1)
