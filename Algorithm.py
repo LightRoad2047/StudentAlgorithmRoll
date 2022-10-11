@@ -6,7 +6,7 @@ list__course=[r'C:\Users\dao2a\Desktop\AlorithmRoll\概率论.csv',r'C:\Users\da
 def main():
 
     for k in range(5):
-        with open(list__course[0], 'r') as f:
+        with open(list__course[k], 'r') as f:
             reader = csv.reader(f)
             header = next(reader)
 
@@ -184,6 +184,8 @@ def main():
             print(rating)
             rating = backfenzi / backfenmu
             print(rating)
+
+
 
 
 
