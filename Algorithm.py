@@ -169,6 +169,7 @@ def main():
                     fenzi+=1
                     backfenzi+=1
 
+
             fenmu+=f
             backfenmu+=f
             for j in range(f):
@@ -176,6 +177,8 @@ def main():
                 if list3[num]==0:
                     fenzi+=1
                     backfenzi+=1
+
+            print(backfenzi,backfenmu)
 
 
 
